@@ -70,7 +70,7 @@ let eventIdList = formattedVals.map(v => transport.schedule(() => {
 let eventIdToPoint = {};
 let pointToEventId = {};
 eventIdList.forEach((id, ind) => {
-    eventIds[id] = formattedVals[ind];
+    eventIdToPoint[id] = formattedVals[ind];
     pointToEventId[formattedVals[ind]] = id;
 });
 
@@ -104,3 +104,11 @@ function removeBreakpont(point){
     }
 }
 
+
+let envelope = new Nexus.Envelope('#envelope',{
+    'size': [300,150]
+});
+
+envelope.on('change',function(v) {
+    console.log(v);
+});
