@@ -7421,7 +7421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        // must do this b/c new node may have been created
 	        this.calculatePoints();
-	        this.emit("change", this.points);
+	        // this.emit("change", this.points);
 	        this.render();
 	      }
 	    },
@@ -7435,7 +7435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          this.scaleNode(this.selected);
 	
 	          this.calculatePoints();
-	          this.emit("change", this.points);
+	        //   this.emit("change", this.points);
 	          this.render();
 	        }
 	      }
